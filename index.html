@@ -327,9 +327,13 @@ button:hover, .primary:hover { transform: scale(1.05); }
       <h2>Secret Gift 🎁</h2>
       <div class="video-container">
   <video autoplay loop muted playsinline>
-    <source src="Video.mp4" type="video/mp4">
+    <source src="dd41e366-7089-4c7f-8b80-6971f86b4480.mp4" type="video/mp4">
   </video>
 </div>
+     <audio id="bgMusic" loop>
+     <source src="Music.mp3" type="audio/mpeg">Your browser does not support the audio element.
+</audio>
+ 
     </div>
  
   </div>
@@ -354,7 +358,7 @@ function showScreen(id){
  
 const loveMessages = [
   " I love you hon Thanks pagiging supporting and mapag mahal. 💖",
-  "message 🌻",
+  " Thank you pag kinococorrect mo ako sa mga minsan mali ako para maging okay tayo 🌻",
   "message 💕",
   " message 😘",
   "message 😘",
@@ -422,11 +426,20 @@ function startMagic(){
   showScreen("message");
   secretBtn.disabled = false;  
 }
+ const bgMusic = document.getElementById("bgMusic");
+ 
+document.querySelector(".heart-seal").onclick = () => {
+  envelope.classList.add("open");
+  setTimeout(() => modal.style.display = "flex", 900);
+  // Play background music on first interaction
+  if(bgMusic.paused) bgMusic.play();
+};
  
 </script>
  
 </body>
 </html>
+
 
 
 
